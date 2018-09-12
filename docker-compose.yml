@@ -1,0 +1,14 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:10.5-alpine
+    env_file: .env
+    volumes:
+      - pg-data-volume:/var/lib/postgresql/data
+    ports:
+      - '8765:5432'   #5432 is a default postgres port
+
+volumes: 
+  pg-data-volume:
+
+
